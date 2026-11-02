@@ -1,0 +1,28 @@
+class Outer 
+{
+void display() 
+{
+ System.out.println("This is the outer class display function.");
+ }
+ class Inner 
+{
+ void display() 
+{
+ System.out.println("This is the inner class display function.");
+ }
+ }
+}
+public class Main 
+{
+public static void main(String[] args) 
+{
+ Outer outerObject = new Outer();
+ Outer.Inner innerObject = outerObject.new Inner();
+ outerObject.display(); // Calls the outer class display method
+ innerObject.display(); // Calls the inner class display method
+ }
+}
+
+
+
+

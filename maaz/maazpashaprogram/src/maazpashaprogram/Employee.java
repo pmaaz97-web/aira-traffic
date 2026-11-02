@@ -1,0 +1,79 @@
+package maazpashaprogram;
+public class Employee
+{
+   private int id;
+   private String name;
+   private double salary;
+   public Employee(int id, String name, double salary)
+   {
+      this.id = id;
+      this.name = name;
+      this.salary = salary;
+   }
+   public void raiseSalary(double percent)
+   {
+     salary += salary*  (percent / 100);
+   }
+   public void displayInfo()
+   {
+     System.out.println("Employee ID: " + id);
+     System.out.println("Employee Name: " + name);
+     System.out.println("Employee Salary: $" + salary);
+   }
+public static void main(String[] args)
+{
+   Employee employee1 = new Employee(1, "John ", 6700.0);
+   Employee employee2 = new Employee(2, " Smith", 890000.0);
+   System.out.println("Before Salary Raise:");
+   employee1.displayInfo();
+   employee2.displayInfo();
+   // Raise salaries by 10%
+   employee1.raiseSalary(10);
+   employee2.raiseSalary(10);
+   System.out.println("\nAfter Salary Raise:");
+   employee1.displayInfo();
+   employee2.displayInfo();
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
